@@ -1,3 +1,3 @@
 # SharePlatform
 
-![VS Code + draw.io](image/usercase.dio)
+![VS Code + draw.io](images/usercase.drawio.svg)
