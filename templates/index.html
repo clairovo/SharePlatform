@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>文件上传实例</title>
+</head>
+<body>
+<h1 align="center">文件上传示例</h1>
+  <form enctype="multipart/form-data"action="/uploadFiles"method="post">
+    <input id="username" name="name" type="text"/>
+   <input type="file" name="files"  multiple = ""/>
+    <br/>
+   <input type="submit"value="upload"/>
+   </form>
+<form action="/downloadFiles"method="post">
+    <br/>
+    <button type="submit">下载</button>
+   </form>
+
+</body>
+</html>
