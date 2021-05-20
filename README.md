@@ -2,4 +2,4 @@
 
 UserCase Diagram
 
-![VS Code + drawio](./usercase.drawio.svg)
+![VS Code + drawio](usercase.drawio.svg)
