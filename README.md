@@ -1,4 +1,5 @@
 # SharePlatform
-Example
 
-![VS Code + draw.io](images/usercase.drawio.svg)
+UserCase Diagram
+
+![VS Code + drawio](usercase.drawio.svg)
