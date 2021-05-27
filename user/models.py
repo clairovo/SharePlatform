@@ -9,9 +9,9 @@ from mongoengine import *
 class Student(Document):
     uid = SequenceField(primary_key=True)  # 自增id ,主码
     username = StringField(max_length=12,unique=True,null=False,verbose_name='学号')
-    name = StringField(max_length=20,verbose_name='姓名')
+    name = StringField(max_length=20,verbose_name='姓名',default='')
     password = StringField(max_length=100,verbose_name='密码')
-    email = EmailField(required=False,unique=False,verbose_name='邮箱')
+    email = EmailField(verbose_name='邮箱',default='xy.mail.ustc.edu.cn')
     sex = IntField(default=0,verbose_name='性别') # man 0,woman 1
     major = StringField(max_length=20,required=False,verbose_name='专业')
     creat_time = StringField(max_length=50,verbose_name='创建时间',

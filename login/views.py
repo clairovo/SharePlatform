@@ -9,7 +9,7 @@ from django.views.decorators.csrf import csrf_exempt
 
 
 class LoginView(APIView):
-    #permission_classes = [] # 取消全局token认证
+    permission_classes = [] # 取消全局token认证
 
     def post(self,request):
         """

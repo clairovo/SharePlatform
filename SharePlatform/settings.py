@@ -140,6 +140,7 @@ INSTALLED_APPS = [
     'login.apps.LoginConfig',
     'resource.apps.ResourceConfig',
     'user',
+    'course',
     'corsheaders'
 ]
 
@@ -235,6 +236,12 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+STATICFILES_DIRS = (
+    os.path.join(os.path.join(BASE_DIR, 'static')),
+)
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')    # 配置media文件，用于记录日志/存放文件
 ## 跨域设置
 CORS_ALLOW_CREDENTIALS = True
 CORS_ORIGIN_ALLOW_ALL = True

@@ -120,7 +120,7 @@ def preview(request):
     if request.method == 'POST':
         return HttpResponse('hello word')
     path = 'E:\\receive\\resources'
-    file_path = 'video1.mp4'
+    file_path = 'django简介.pptx'
     file_name = '《算法图解》.pdf'
     if not file_path:
         return HttpResponse('no filePath')

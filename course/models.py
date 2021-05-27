@@ -12,6 +12,7 @@ class Course(Document):
     cno = SequenceField(unique=True,verbose_name='课程号')
     name = StringField(max_length=20,default='Python')
     overview = StringField(max_length=200,default='课程概述')
+    image = StringField(max_length=100,default='/image/course/default.jpeg')
     owner_id = IntField(verbose_name='创建人id')  # 教师的uid
     owner_name = StringField(max_length=20,verbose_name='创建人姓名',default='teacher')  # 教师的name
     creat_time = StringField(max_length=50, verbose_name='创建时间',

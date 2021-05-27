@@ -24,7 +24,7 @@ class Authenticated:  # 无需继承其他认证类
         :param view: 视图函数
         :return: 是否登录（true or false)
         """
-        token = request.META.get('HTTP_AUTHORIZATION')
+        token = request.META.get('HTTP_TOKEN')
         if token:
             BOOLEAN=verify_token(token=token)  # 验证成功返回True 失效及错误token 返回False
             return BOOLEAN
@@ -80,7 +80,7 @@ def create_token(user,role):
     :param role: student or teacher
     :return: token
     """
-    payload = {"exp": timezone.now()+datetime.timedelta(minutes=1), "uid": user.uid, "username": user.username,
+    payload = {"exp": timezone.now()+datetime.timedelta(hours=1), "uid": user.uid, "username": user.username,
                "name": user.name, 'role': role}
     token = jwt.encode(payload,settings.SECRET_KEY , algorithm='HS256').decode('utf8')
     return token

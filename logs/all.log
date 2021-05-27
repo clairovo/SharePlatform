@@ -228,3 +228,871 @@ Traceback (most recent call last):
     'url': request.get_host() + new_path,
 RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to 127.0.0.1:8000/api/login/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
 2021-04-06 10:57:08,524 [Thread-3:103584] [django.request:230] [log:log_response] [WARNING]- Forbidden: /api/login/
+2021-05-24 13:03:49,219 [Thread-2:7468] [django.request:230] [log:log_response] [WARNING]- Not Found: /favicon.ico
+2021-05-24 13:04:55,051 [Thread-2:7468] [django.request:230] [log:log_response] [WARNING]- Not Found: /preview/video1.mp4
+2021-05-24 13:05:21,230 [Thread-2:7468] [django.request:230] [log:log_response] [WARNING]- Not Found: /preview/video1.mp4/
+2021-05-24 13:06:03,372 [Thread-4:25212] [django.request:230] [log:log_response] [WARNING]- Not Found: /favicon.ico
+2021-05-25 13:21:28,063 [Thread-1:43516] [django.request:230] [log:log_response] [WARNING]- Forbidden: /api/login/
+2021-05-25 13:21:44,321 [Thread-1:43516] [django.request:230] [log:log_response] [WARNING]- Forbidden: /api/login/
+2021-05-25 13:22:59,995 [Thread-1:54324] [django.request:230] [log:log_response] [WARNING]- Unauthorized: /api/login/
+2021-05-25 13:26:57,170 [Thread-1:48504] [django.request:230] [log:log_response] [WARNING]- Unauthorized: /api/login/
+2021-05-25 16:49:25,902 [Thread-2:60148] [django.request:230] [log:log_response] [WARNING]- Not Found: /favicon.ico
+2021-05-25 17:48:49,956 [Thread-1:57396] [django.request:230] [log:log_response] [WARNING]- Unauthorized: /api/login/
+2021-05-25 17:54:27,334 [Thread-1:57396] [django.request:230] [log:log_response] [WARNING]- Forbidden: /courses/
+2021-05-25 17:55:34,548 [Thread-1:57396] [django.request:230] [log:log_response] [WARNING]- Forbidden: /courses/
+2021-05-25 17:55:57,495 [Thread-1:57396] [django.request:230] [log:log_response] [WARNING]- Forbidden: /courses/
+2021-05-25 17:57:12,923 [Thread-1:57396] [django.request:230] [log:log_response] [WARNING]- Forbidden: /courses/
+2021-05-25 17:57:17,587 [Thread-1:57396] [django.request:230] [log:log_response] [WARNING]- Forbidden: /courses/
+2021-05-25 17:58:46,094 [Thread-1:57396] [django.request:230] [log:log_response] [WARNING]- Forbidden: /courses/
+2021-05-25 17:58:48,856 [Thread-1:57396] [django.request:230] [log:log_response] [WARNING]- Forbidden: /courses/
+2021-05-25 17:59:32,032 [Thread-1:57396] [django.request:230] [log:log_response] [WARNING]- Forbidden: /courses/
+2021-05-25 18:02:00,726 [Thread-1:63324] [django.request:230] [log:log_response] [WARNING]- Forbidden: /courses/
+2021-05-25 18:02:06,141 [Thread-1:63324] [django.request:230] [log:log_response] [WARNING]- Forbidden: /courses/
+2021-05-25 18:02:10,116 [Thread-1:63324] [django.request:230] [log:log_response] [WARNING]- Forbidden: /courses/
+2021-05-25 18:03:00,027 [Thread-1:55016] [django.request:230] [log:log_response] [ERROR]- Internal Server Error: /courses/3
+Traceback (most recent call last):
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\base.py", line 260, in get
+    result = next(queryset)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\base.py", line 1590, in __next__
+    raw_doc = next(self._cursor)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\pymongo\cursor.py", line 1215, in next
+    raise StopIteration
+StopIteration
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\shortcuts.py", line 76, in get_object_or_404
+    return queryset.get(*args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\base.py", line 263, in get
+    raise queryset._document.DoesNotExist(msg)
+course.models.DoesNotExist: Course matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\course\views.py", line 72, in retrieve
+    instance = self.get_object()
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\generics.py", line 96, in get_object
+    obj = get_object_or_404(queryset, **filter_kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\generics.py", line 19, in get_object_or_404
+    return _get_object_or_404(queryset, *filter_args, **filter_kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\shortcuts.py", line 77, in get_object_or_404
+    except queryset.model.DoesNotExist:
+AttributeError: 'QuerySet' object has no attribute 'model'
+2021-05-25 18:03:12,664 [Thread-1:55016] [django.request:230] [log:log_response] [WARNING]- Forbidden: /courses/
+2021-05-25 18:04:33,822 [Thread-1:67616] [django.request:230] [log:log_response] [WARNING]- Unauthorized: /courses/
+2021-05-25 18:05:57,388 [Thread-1:67616] [django.request:230] [log:log_response] [ERROR]- Internal Server Error: /courses/
+Traceback (most recent call last):
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\course\views.py", line 64, in dispatch
+    return super(CourseView, self).dispatch(request, *args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\login\login_token.py", line 72, in resolve_token1
+    return func(self,request,args)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\course\views.py", line 26, in post
+    course['owner_id'] = args.get('uid')  # 创建人的uid
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\http\request.py", line 491, in __setitem__
+    self._assert_mutable()
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\http\request.py", line 488, in _assert_mutable
+    raise AttributeError("This QueryDict instance is immutable")
+AttributeError: This QueryDict instance is immutable
+2021-05-25 18:07:21,163 [Thread-1:65800] [django.request:230] [log:log_response] [WARNING]- Unauthorized: /courses/
+2021-05-25 18:07:40,906 [Thread-1:65800] [django.request:230] [log:log_response] [WARNING]- Unauthorized: /courses/
+2021-05-25 18:09:23,120 [Thread-1:66732] [django.request:230] [log:log_response] [ERROR]- Internal Server Error: /courses/
+Traceback (most recent call last):
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\course\views.py", line 64, in dispatch
+    return super(CourseView, self).dispatch(request, *args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\login\login_token.py", line 72, in resolve_token1
+    return func(self,request,args)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\course\views.py", line 26, in post
+    course['owner_id'] = args.get('uid')  # 创建人的uid
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\http\request.py", line 491, in __setitem__
+    self._assert_mutable()
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\http\request.py", line 488, in _assert_mutable
+    raise AttributeError("This QueryDict instance is immutable")
+AttributeError: This QueryDict instance is immutable
+2021-05-25 18:09:38,620 [Thread-1:66732] [django.request:230] [log:log_response] [ERROR]- Internal Server Error: /courses/
+Traceback (most recent call last):
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\course\views.py", line 64, in dispatch
+    return super(CourseView, self).dispatch(request, *args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\login\login_token.py", line 72, in resolve_token1
+    return func(self,request,args)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\course\views.py", line 26, in post
+    course['owner_id'] = args.get('uid')  # 创建人的uid
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\http\request.py", line 491, in __setitem__
+    self._assert_mutable()
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\http\request.py", line 488, in _assert_mutable
+    raise AttributeError("This QueryDict instance is immutable")
+AttributeError: This QueryDict instance is immutable
+2021-05-25 18:10:28,335 [Thread-1:70640] [django.request:230] [log:log_response] [ERROR]- Internal Server Error: /courses/
+Traceback (most recent call last):
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\course\views.py", line 64, in dispatch
+    return super(CourseView, self).dispatch(request, *args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\login\login_token.py", line 72, in resolve_token1
+    return func(self,request,args)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\course\views.py", line 26, in post
+    course['owner_id'] = args.get('uid')  # 创建人的uid
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\http\request.py", line 491, in __setitem__
+    self._assert_mutable()
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\http\request.py", line 488, in _assert_mutable
+    raise AttributeError("This QueryDict instance is immutable")
+AttributeError: This QueryDict instance is immutable
+2021-05-25 18:10:33,053 [Thread-1:70640] [django.request:230] [log:log_response] [ERROR]- Internal Server Error: /courses/
+Traceback (most recent call last):
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\course\views.py", line 64, in dispatch
+    return super(CourseView, self).dispatch(request, *args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\login\login_token.py", line 72, in resolve_token1
+    return func(self,request,args)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\course\views.py", line 26, in post
+    course['owner_id'] = args.get('uid')  # 创建人的uid
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\http\request.py", line 491, in __setitem__
+    self._assert_mutable()
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\http\request.py", line 488, in _assert_mutable
+    raise AttributeError("This QueryDict instance is immutable")
+AttributeError: This QueryDict instance is immutable
+2021-05-25 18:10:39,977 [Thread-1:70640] [django.request:230] [log:log_response] [ERROR]- Internal Server Error: /courses/
+Traceback (most recent call last):
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\course\views.py", line 64, in dispatch
+    return super(CourseView, self).dispatch(request, *args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\login\login_token.py", line 72, in resolve_token1
+    return func(self,request,args)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\course\views.py", line 26, in post
+    course['owner_id'] = args.get('uid')  # 创建人的uid
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\http\request.py", line 491, in __setitem__
+    self._assert_mutable()
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\http\request.py", line 488, in _assert_mutable
+    raise AttributeError("This QueryDict instance is immutable")
+AttributeError: This QueryDict instance is immutable
+2021-05-25 18:14:10,829 [Thread-1:70868] [django.request:230] [log:log_response] [ERROR]- Internal Server Error: /courses/
+Traceback (most recent call last):
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\course\views.py", line 64, in dispatch
+    return super(CourseView, self).dispatch(request, *args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\login\login_token.py", line 72, in resolve_token1
+    return func(self,request,args)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\course\views.py", line 26, in post
+    course['owner_id'] = args.get('uid')  # 创建人的uid
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\http\request.py", line 491, in __setitem__
+    self._assert_mutable()
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\http\request.py", line 488, in _assert_mutable
+    raise AttributeError("This QueryDict instance is immutable")
+AttributeError: This QueryDict instance is immutable
+2021-05-25 18:15:06,486 [Thread-1:70868] [django.request:230] [log:log_response] [ERROR]- Internal Server Error: /courses/
+Traceback (most recent call last):
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\course\views.py", line 64, in dispatch
+    return super(CourseView, self).dispatch(request, *args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\login\login_token.py", line 72, in resolve_token1
+    return func(self,request,args)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\course\views.py", line 26, in post
+    course['owner_id'] = args.get('uid')  # 创建人的uid
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\http\request.py", line 491, in __setitem__
+    self._assert_mutable()
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\http\request.py", line 488, in _assert_mutable
+    raise AttributeError("This QueryDict instance is immutable")
+AttributeError: This QueryDict instance is immutable
+2021-05-25 18:23:14,548 [Thread-1:70848] [django.request:230] [log:log_response] [ERROR]- Internal Server Error: /courses/4
+Traceback (most recent call last):
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\base.py", line 260, in get
+    result = next(queryset)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\base.py", line 1590, in __next__
+    raw_doc = next(self._cursor)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\pymongo\cursor.py", line 1215, in next
+    raise StopIteration
+StopIteration
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\shortcuts.py", line 76, in get_object_or_404
+    return queryset.get(*args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\base.py", line 263, in get
+    raise queryset._document.DoesNotExist(msg)
+course.models.DoesNotExist: Course matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\mixins.py", line 90, in destroy
+    instance = self.get_object()
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\generics.py", line 96, in get_object
+    obj = get_object_or_404(queryset, **filter_kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\generics.py", line 19, in get_object_or_404
+    return _get_object_or_404(queryset, *filter_args, **filter_kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\shortcuts.py", line 77, in get_object_or_404
+    except queryset.model.DoesNotExist:
+AttributeError: 'QuerySet' object has no attribute 'model'
+2021-05-25 18:24:07,978 [Thread-1:70848] [django.request:230] [log:log_response] [ERROR]- Internal Server Error: /courses/4
+Traceback (most recent call last):
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\base.py", line 260, in get
+    result = next(queryset)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\base.py", line 1590, in __next__
+    raw_doc = next(self._cursor)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\pymongo\cursor.py", line 1215, in next
+    raise StopIteration
+StopIteration
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\shortcuts.py", line 76, in get_object_or_404
+    return queryset.get(*args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\base.py", line 263, in get
+    raise queryset._document.DoesNotExist(msg)
+course.models.DoesNotExist: Course matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\mixins.py", line 90, in destroy
+    instance = self.get_object()
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\generics.py", line 96, in get_object
+    obj = get_object_or_404(queryset, **filter_kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\generics.py", line 19, in get_object_or_404
+    return _get_object_or_404(queryset, *filter_args, **filter_kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\shortcuts.py", line 77, in get_object_or_404
+    except queryset.model.DoesNotExist:
+AttributeError: 'QuerySet' object has no attribute 'model'
+2021-05-25 18:27:52,032 [Thread-1:69680] [django.request:230] [log:log_response] [ERROR]- Internal Server Error: /courses/4
+Traceback (most recent call last):
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\base.py", line 260, in get
+    result = next(queryset)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\base.py", line 1590, in __next__
+    raw_doc = next(self._cursor)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\pymongo\cursor.py", line 1215, in next
+    raise StopIteration
+StopIteration
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\shortcuts.py", line 76, in get_object_or_404
+    return queryset.get(*args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\base.py", line 263, in get
+    raise queryset._document.DoesNotExist(msg)
+course.models.DoesNotExist: Course matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\mixins.py", line 90, in destroy
+    instance = self.get_object()
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\generics.py", line 96, in get_object
+    obj = get_object_or_404(queryset, **filter_kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\generics.py", line 19, in get_object_or_404
+    return _get_object_or_404(queryset, *filter_args, **filter_kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\shortcuts.py", line 77, in get_object_or_404
+    except queryset.model.DoesNotExist:
+AttributeError: 'QuerySet' object has no attribute 'model'
+2021-05-27 10:11:47,794 [Thread-1:3420] [django.request:230] [log:log_response] [WARNING]- Not Found: /favicon.ico
+2021-05-27 10:35:07,012 [Thread-1:18264] [django.request:230] [log:log_response] [ERROR]- Internal Server Error: /api/login/
+Traceback (most recent call last):
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\login\views.py", line 42, in post
+    teacher = Teacher.objects.filter(username=req.get('username')).first()
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\manager.py", line 37, in __get__
+    queryset = queryset_class(owner, owner._get_collection())
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\document.py", line 215, in _get_collection
+    if cls._meta.get("auto_create_index", True) and db.client.is_primary:
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\pymongo\mongo_client.py", line 1031, in is_primary
+    return self._server_property('is_writable')
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\pymongo\mongo_client.py", line 856, in _server_property
+    writable_server_selector)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\pymongo\topology.py", line 243, in select_server
+    address))
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\pymongo\topology.py", line 200, in select_servers
+    selector, server_timeout, address)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\pymongo\topology.py", line 217, in _select_servers_loop
+    (self._error_message(selector), timeout, self.description))
+pymongo.errors.ServerSelectionTimeoutError: 127.0.0.1:27017: [WinError 10061] 由于目标计算机积极拒绝，无法连接。, Timeout: 30s, Topology Description: <TopologyDescription id: 60af0328c5aa1c4c426babd2, topology_type: Single, servers: [<ServerDescription ('127.0.0.1', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('127.0.0.1:27017: [WinError 10061] 由于目标计算机积极拒绝，无法连接。')>]>
+2021-05-27 10:39:06,958 [Thread-1:12372] [django.request:230] [log:log_response] [WARNING]- Method Not Allowed: /api/login/
+2021-05-27 10:39:51,534 [Thread-7:3596] [django.request:230] [log:log_response] [ERROR]- Internal Server Error: /api/login/
+Traceback (most recent call last):
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\login\views.py", line 42, in post
+    teacher = Teacher.objects.filter(username=req.get('username')).first()
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\manager.py", line 37, in __get__
+    queryset = queryset_class(owner, owner._get_collection())
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\document.py", line 215, in _get_collection
+    if cls._meta.get("auto_create_index", True) and db.client.is_primary:
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\pymongo\mongo_client.py", line 1031, in is_primary
+    return self._server_property('is_writable')
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\pymongo\mongo_client.py", line 856, in _server_property
+    writable_server_selector)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\pymongo\topology.py", line 243, in select_server
+    address))
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\pymongo\topology.py", line 200, in select_servers
+    selector, server_timeout, address)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\pymongo\topology.py", line 217, in _select_servers_loop
+    (self._error_message(selector), timeout, self.description))
+pymongo.errors.ServerSelectionTimeoutError: 127.0.0.1:27017: [WinError 10061] 由于目标计算机积极拒绝，无法连接。, Timeout: 30s, Topology Description: <TopologyDescription id: 60af0621103b2f6b1be5210f, topology_type: Single, servers: [<ServerDescription ('127.0.0.1', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('127.0.0.1:27017: [WinError 10061] 由于目标计算机积极拒绝，无法连接。')>]>
+2021-05-27 11:05:14,822 [Thread-1:19520] [django.request:230] [log:log_response] [ERROR]- Internal Server Error: /api/login/
+Traceback (most recent call last):
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\login\views.py", line 42, in post
+    teacher = Teacher.objects.filter(username=req.get('username')).first()
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\manager.py", line 37, in __get__
+    queryset = queryset_class(owner, owner._get_collection())
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\document.py", line 215, in _get_collection
+    if cls._meta.get("auto_create_index", True) and db.client.is_primary:
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\pymongo\mongo_client.py", line 1031, in is_primary
+    return self._server_property('is_writable')
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\pymongo\mongo_client.py", line 856, in _server_property
+    writable_server_selector)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\pymongo\topology.py", line 243, in select_server
+    address))
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\pymongo\topology.py", line 200, in select_servers
+    selector, server_timeout, address)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\pymongo\topology.py", line 217, in _select_servers_loop
+    (self._error_message(selector), timeout, self.description))
+pymongo.errors.ServerSelectionTimeoutError: 127.0.0.1:27017: [WinError 10061] 由于目标计算机积极拒绝，无法连接。, Timeout: 30s, Topology Description: <TopologyDescription id: 60af0bfcda0320f1f6b82ccd, topology_type: Single, servers: [<ServerDescription ('127.0.0.1', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('127.0.0.1:27017: [WinError 10061] 由于目标计算机积极拒绝，无法连接。')>]>
+2021-05-27 12:14:57,507 [Thread-1:19188] [django.request:230] [log:log_response] [ERROR]- Internal Server Error: /api/login/
+Traceback (most recent call last):
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\login\views.py", line 42, in post
+    teacher = Teacher.objects.filter(username=req.get('username')).first()
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\base.py", line 287, in first
+    result = queryset[0]
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\base.py", line 191, in __getitem__
+    queryset._cursor[key],
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\pymongo\cursor.py", line 647, in __getitem__
+    for doc in clone:
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\pymongo\cursor.py", line 1207, in next
+    if len(self.__data) or self._refresh():
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\pymongo\cursor.py", line 1100, in _refresh
+    self.__session = self.__collection.database.client._ensure_session()
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\pymongo\mongo_client.py", line 1816, in _ensure_session
+    return self.__start_session(True, causal_consistency=False)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\pymongo\mongo_client.py", line 1766, in __start_session
+    server_session = self._get_server_session()
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\pymongo\mongo_client.py", line 1802, in _get_server_session
+    return self._topology.get_server_session()
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\pymongo\topology.py", line 488, in get_server_session
+    None)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\pymongo\topology.py", line 217, in _select_servers_loop
+    (self._error_message(selector), timeout, self.description))
+pymongo.errors.ServerSelectionTimeoutError: 127.0.0.1:27017: [WinError 10061] 由于目标计算机积极拒绝，无法连接。, Timeout: 30s, Topology Description: <TopologyDescription id: 60af1bfd129ebf5b5754eed9, topology_type: Single, servers: [<ServerDescription ('127.0.0.1', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('127.0.0.1:27017: [WinError 10061] 由于目标计算机积极拒绝，无法连接。')>]>
+2021-05-27 12:53:04,340 [Thread-1:21628] [django.request:230] [log:log_response] [WARNING]- Forbidden: /courses/
+2021-05-27 12:53:43,434 [Thread-1:21628] [django.request:230] [log:log_response] [WARNING]- Forbidden: /courses/
+2021-05-27 12:53:52,308 [Thread-1:21628] [django.request:230] [log:log_response] [WARNING]- Forbidden: /courses/
+2021-05-27 12:54:06,993 [Thread-1:21628] [django.request:230] [log:log_response] [WARNING]- Forbidden: /courses/
+2021-05-27 12:54:30,534 [Thread-1:21628] [django.request:230] [log:log_response] [WARNING]- Forbidden: /courses/
+2021-05-27 12:54:41,795 [Thread-1:21628] [django.request:230] [log:log_response] [WARNING]- Forbidden: /courses/
+2021-05-27 12:55:24,473 [Thread-1:21628] [django.request:230] [log:log_response] [ERROR]- Internal Server Error: /courses/4
+Traceback (most recent call last):
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\base.py", line 260, in get
+    result = next(queryset)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\base.py", line 1590, in __next__
+    raw_doc = next(self._cursor)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\pymongo\cursor.py", line 1215, in next
+    raise StopIteration
+StopIteration
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\shortcuts.py", line 76, in get_object_or_404
+    return queryset.get(*args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\base.py", line 263, in get
+    raise queryset._document.DoesNotExist(msg)
+course.models.DoesNotExist: Course matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\course\views.py", line 73, in retrieve
+    instance = self.get_object()
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\generics.py", line 96, in get_object
+    obj = get_object_or_404(queryset, **filter_kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\generics.py", line 19, in get_object_or_404
+    return _get_object_or_404(queryset, *filter_args, **filter_kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\shortcuts.py", line 77, in get_object_or_404
+    except queryset.model.DoesNotExist:
+AttributeError: 'QuerySet' object has no attribute 'model'
+2021-05-27 12:55:58,354 [Thread-1:21628] [django.request:230] [log:log_response] [ERROR]- Internal Server Error: /courses/1
+Traceback (most recent call last):
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\base.py", line 260, in get
+    result = next(queryset)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\base.py", line 1590, in __next__
+    raw_doc = next(self._cursor)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\pymongo\cursor.py", line 1215, in next
+    raise StopIteration
+StopIteration
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\shortcuts.py", line 76, in get_object_or_404
+    return queryset.get(*args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\base.py", line 263, in get
+    raise queryset._document.DoesNotExist(msg)
+course.models.DoesNotExist: Course matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\course\views.py", line 73, in retrieve
+    instance = self.get_object()
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\generics.py", line 96, in get_object
+    obj = get_object_or_404(queryset, **filter_kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\generics.py", line 19, in get_object_or_404
+    return _get_object_or_404(queryset, *filter_args, **filter_kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\shortcuts.py", line 77, in get_object_or_404
+    except queryset.model.DoesNotExist:
+AttributeError: 'QuerySet' object has no attribute 'model'
+2021-05-27 12:56:14,104 [Thread-1:21628] [django.request:230] [log:log_response] [WARNING]- Forbidden: /courses/
+2021-05-27 12:56:59,006 [Thread-1:21628] [django.request:230] [log:log_response] [WARNING]- Forbidden: /courses/
+2021-05-27 12:59:35,436 [Thread-1:22492] [django.request:230] [log:log_response] [WARNING]- Forbidden: /courses/
+2021-05-27 12:59:45,834 [Thread-1:22492] [django.request:230] [log:log_response] [WARNING]- Forbidden: /courses/
+2021-05-27 13:01:47,309 [Thread-1:19868] [django.request:230] [log:log_response] [WARNING]- Forbidden: /courses/
+2021-05-27 13:08:24,240 [Thread-1:15836] [django.request:230] [log:log_response] [WARNING]- Forbidden: /courses/
+2021-05-27 13:08:48,425 [Thread-1:15836] [django.request:230] [log:log_response] [ERROR]- Internal Server Error: /api/login/
+Traceback (most recent call last):
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\login\views.py", line 53, in post
+    data['msg'] = 'no user named' + req.get('username')
+TypeError: can only concatenate str (not "NoneType") to str
+2021-05-27 13:09:48,781 [Thread-1:15836] [django.request:230] [log:log_response] [ERROR]- Internal Server Error: /api/login/
+Traceback (most recent call last):
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\login\views.py", line 53, in post
+    data['msg'] = 'no user named' + req.get('username')
+TypeError: can only concatenate str (not "NoneType") to str
+2021-05-27 13:10:22,425 [Thread-1:15836] [django.request:230] [log:log_response] [ERROR]- Internal Server Error: /api/login/
+Traceback (most recent call last):
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\login\views.py", line 53, in post
+    data['msg'] = 'no user named' + req.get('username')
+TypeError: can only concatenate str (not "NoneType") to str
+2021-05-27 13:15:53,729 [Thread-1:15836] [django.request:230] [log:log_response] [ERROR]- Internal Server Error: /api/login/
+Traceback (most recent call last):
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\login\views.py", line 53, in post
+    data['msg'] = 'no user named' + req.get('username')
+TypeError: can only concatenate str (not "NoneType") to str
+2021-05-27 13:16:22,642 [Thread-1:15836] [django.request:230] [log:log_response] [WARNING]- Forbidden: /courses/
+2021-05-27 13:16:41,616 [Thread-1:15836] [django.request:230] [log:log_response] [WARNING]- Forbidden: /courses/
+2021-05-27 13:17:06,960 [Thread-1:20948] [django.request:230] [log:log_response] [WARNING]- Not Found: /favicon.ico
+2021-05-27 13:21:31,058 [Thread-1:18616] [django.request:230] [log:log_response] [WARNING]- Forbidden: /courses/
+2021-05-27 13:21:49,068 [Thread-1:10512] [django.request:230] [log:log_response] [WARNING]- Forbidden: /courses/
+2021-05-27 13:22:22,182 [Thread-1:10512] [django.request:230] [log:log_response] [WARNING]- Forbidden: /courses/
+2021-05-27 13:24:12,367 [Thread-1:18416] [django.request:230] [log:log_response] [WARNING]- Forbidden: /courses/
+2021-05-27 13:24:29,803 [Thread-1:18416] [django.request:230] [log:log_response] [WARNING]- Forbidden: /courses/
+2021-05-27 13:26:15,167 [Thread-1:12416] [django.request:230] [log:log_response] [WARNING]- Forbidden: /user/courses
+2021-05-27 13:26:39,061 [Thread-1:12416] [django.request:230] [log:log_response] [WARNING]- Forbidden: /user/courses
+2021-05-27 13:26:41,481 [Thread-1:12416] [django.request:230] [log:log_response] [WARNING]- Forbidden: /user/courses
+2021-05-27 13:28:36,736 [Thread-1:9500] [django.request:230] [log:log_response] [WARNING]- Forbidden: /courses/
+2021-05-27 13:28:46,979 [Thread-1:9500] [django.request:230] [log:log_response] [WARNING]- Forbidden: /courses/
+2021-05-27 13:28:49,089 [Thread-1:9500] [django.request:230] [log:log_response] [WARNING]- Forbidden: /courses/
+2021-05-27 13:30:27,243 [Thread-1:10416] [django.request:230] [log:log_response] [WARNING]- Forbidden: /user/courses
+2021-05-27 13:30:40,814 [Thread-1:10416] [django.request:230] [log:log_response] [WARNING]- Forbidden: /user/courses
+2021-05-27 13:32:15,033 [Thread-1:4120] [django.request:230] [log:log_response] [WARNING]- Forbidden: /user/courses
+2021-05-27 13:32:52,452 [Thread-1:9136] [django.request:230] [log:log_response] [WARNING]- Method Not Allowed: /user/courses
+2021-05-27 13:33:03,048 [Thread-1:9136] [django.request:230] [log:log_response] [WARNING]- Method Not Allowed: /user/courses
+2021-05-27 13:37:04,410 [Thread-1:11324] [django.request:230] [log:log_response] [WARNING]- Not Found: /media/images/java.jpeg
+2021-05-27 13:37:09,062 [Thread-1:11324] [django.request:230] [log:log_response] [WARNING]- Not Found: /media/images/java.jpeg
+2021-05-27 13:37:24,895 [Thread-1:11324] [django.request:230] [log:log_response] [WARNING]- Not Found: /media/images/java.jpeg
+2021-05-27 13:49:37,034 [Thread-3:21764] [django.request:230] [log:log_response] [WARNING]- Not Found: /favicon.ico
+2021-05-27 13:49:41,738 [Thread-3:21764] [django.request:230] [log:log_response] [WARNING]- Not Found: /media/images/java.jpeg
+2021-05-27 13:52:21,823 [Thread-3:21764] [django.request:230] [log:log_response] [WARNING]- Not Found: /media/images/course/django简介
+2021-05-27 13:59:10,239 [Thread-12:21576] [django.request:230] [log:log_response] [WARNING]- Not Found: /favicon.ico
+2021-05-27 14:00:23,594 [Thread-14:22224] [django.request:230] [log:log_response] [WARNING]- Not Found: /downloadFiles/2
+2021-05-27 14:00:23,724 [Thread-14:22224] [django.request:230] [log:log_response] [WARNING]- Not Found: /favicon.ico
+2021-05-27 14:00:37,892 [Thread-14:22224] [django.request:230] [log:log_response] [ERROR]- Internal Server Error: /downloadFiles
+Traceback (most recent call last):
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+TypeError: get() missing 1 required positional argument: 'resource_id'
+2021-05-27 14:02:28,552 [Thread-1:22000] [apps.views:86] [views:get] [INFO]- 下载Python课程报告统一规范.pdf
+2021-05-27 14:02:39,271 [Thread-4:2760] [django.request:230] [log:log_response] [WARNING]- Not Found: /favicon.ico
+2021-05-27 14:02:43,903 [Thread-4:2760] [apps.views:86] [views:get] [INFO]- 下载Python课程报告统一规范.pdf
+2021-05-27 14:04:57,709 [Thread-1:7312] [django.request:230] [log:log_response] [ERROR]- Internal Server Error: /downloadFiles
+Traceback (most recent call last):
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+TypeError: get() missing 1 required positional argument: 'resource_id'

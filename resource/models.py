@@ -40,7 +40,7 @@ class Resource(Document):
         resource = Resource.objects.filter(path=file_path).first()
         if not resource:
             resource = Resource(name=file.name, type=file_type, size=file_size, owner=owner, path=file_path,
-                                course=course.cno)
+                                course=course)
             resource.save()
         else:
             # 更新资源数据库记录
