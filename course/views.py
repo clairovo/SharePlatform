@@ -15,7 +15,7 @@ from django.views.decorators.csrf import csrf_exempt
 
 class CourseView(APIView):
 
-    path = os.path.join(MEDIA_ROOT,'images/course')
+    path = os.path.join(MEDIA_ROOT,os.path.join('images','course'))
     @resolve_token
     def post(self,request,args):
         data = {'code': 401}

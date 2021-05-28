@@ -13,6 +13,7 @@ from .models import Resource
 from user.models import Teacher
 from pathlib import Path
 from django.utils._os import safe_join
+from SharePlatform.settings import MEDIA_ROOT
 # Create your views here.
 
 
@@ -22,7 +23,7 @@ def hello(request):
 
 class FileUploadView(APIView):
     permission_classes = []
-    path = 'E:\\receive\\resources'
+    path = os.path.join(MEDIA_ROOT,'files')
     logger = logging.getLogger('app.views')
 
     def get(self,request):
@@ -68,7 +69,7 @@ class FileUploadView(APIView):
 
 class FileDownloadView(APIView):
     permission_classes = []
-    path = 'E:\\receive\\resources'
+    path = os.path.join(MEDIA_ROOT, 'files')
     logger = logging.getLogger('apps.views')
 
     def get(self,request, resource_id):
