@@ -6,7 +6,6 @@ from login.login_token import *
 from .models import Course
 from rest_framework.viewsets import ModelViewSet
 from SharePlatform.settings import MEDIA_ROOT
-from django.views.decorators.csrf import csrf_exempt
 # Create your views here.
 """"
 创建课程的视图函数
