@@ -31,8 +31,8 @@ LOGGING = {
     'formatters': {
         # 日志格式
         'standard': {
-            'format': '%(asctime)s [%(threadName)s:%(thread)d] [%(name)s:%(lineno)d] '
-                      '[%(module)s:%(funcName)s] [%(levelname)s]- %(message)s'
+            'format': '%(asctime)s  [%(levelname)s] %(thread)d --- [%(threadName)s] [%(name)s:%(lineno)d]'
+                      '[%(module)s:%(funcName)s]: %(message)s'
         }
     },
     'filter': {
@@ -94,10 +94,27 @@ LOGGING = {
             'propagate': False
         },
         # login,resource等应用操作的view.py 对应的日志
-        'apps.views': {
+        'resource.views': {
             'handlers': ['default', 'error'],
             'level': 'INFO',
             'propagate': True
+        },
+        'login.views': {
+            'handlers': ['default', 'error'],
+            'level': 'INFO',
+            'propagate': True
+        },
+        'course.views': {
+            'handlers': ['default', 'error'],
+            'level': 'INFO',
+            'propagate': True
+
+        },
+        'user.views': {
+            'handlers': ['default', 'error'],
+            'level': 'INFO',
+            'propagate': True
+
         },
         'sourceDns.webdns.util': {
             'handlers': ['error'],
@@ -123,7 +140,7 @@ SECRET_KEY = '=w(p4-&-%wa#0&l7((9b!k+)6wi7jg3$vptj0qdzyy=n+df$v+'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*',]
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -194,9 +211,9 @@ connect('test',host='127.0.0.1', port=27017)  # 连接数据库的名称
 
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': (
-        'login.login_token.Authenticated',  # 自定义登录验证类
+        #'login.login_token.AdminPermission',
+        'login.login_token.Authenticated',
     ),
-
 }
 
 # Password validation

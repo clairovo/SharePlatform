@@ -2,8 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="39f192cd-2383-42f8-a5f7-4af556fc7738" name="Default Changelist" comment="add media">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/files/Python/Python课程报告统一规范.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/images/course/cplus.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/images/course/defult.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/images/course/file.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/images/course/python.jpeg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SharePlatform/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/SharePlatform/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SharePlatform/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/SharePlatform/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/course/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/course/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/course/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/course/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/course/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/course/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login/login_token.py" beforeDir="false" afterPath="$PROJECT_DIR$/login/login_token.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/login/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/login/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/all.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/all.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resource/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/resource/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,13 +73,22 @@
       </list>
     </option>
   </component>
+  <component name="ProblemsViewState">
+    <hideBySeverity>
+      <option value="200" />
+      <option value="300" />
+    </hideBySeverity>
+    <option name="sortByName" value="true" />
+  </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="44" />
     <option name="width" value="1714" />
     <option name="height" value="993" />
   </component>
   <component name="ProjectId" id="1tTK2k7ctNgpwwr3oQ8HyNcd8hp" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -108,10 +134,13 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="E:/工程实践/SharePlatform" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Documents/Tencent Files/2201287921/FileRecv/后端" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -120,12 +149,12 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\TJ\PycharmProjects\SharePlatform" />
       <recent name="C:\Users\TJ\PycharmProjects\SharePlatform\media\images\course" />
+      <recent name="C:\Users\TJ\PycharmProjects\SharePlatform" />
       <recent name="C:\Users\TJ\PycharmProjects\SharePlatform\media\images" />
       <recent name="C:\Users\TJ\PycharmProjects\SharePlatform\static\course" />
       <recent name="C:\Users\TJ\PycharmProjects\SharePlatform\user" />
@@ -144,16 +173,16 @@
         <env name="PYTHONUNBUFFERED" value="1" />
         <env name="DJANGO_SETTINGS_MODULE" value="SharePlatform.settings" />
       </envs>
-      <option name="SDK_HOME" value="E:\工程实践\SharePlatform\venv\Scripts\python.exe" />
+      <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
+      <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="launchJavascriptDebuger" value="false" />
       <option name="port" value="8000" />
-      <option name="host" value="" />
+      <option name="host" value="localhost" />
       <option name="additionalOptions" value="" />
-      <option name="browserUrl" value="" />
+      <option name="browserUrl" value="http://127.0.0.1:8000/" />
       <option name="runTestServer" value="false" />
       <option name="runNoReload" value="false" />
       <option name="useCustomRunCommand" value="false" />
@@ -232,6 +261,26 @@
       <workItem from="1622091090108" duration="8217000" />
       <workItem from="1622161364953" duration="1734000" />
       <workItem from="1622787436097" duration="1332000" />
+      <workItem from="1622788789549" duration="2525000" />
+      <workItem from="1622805315542" duration="596000" />
+      <workItem from="1622964190161" duration="663000" />
+      <workItem from="1622964870910" duration="202000" />
+      <workItem from="1622965112025" duration="5192000" />
+      <workItem from="1622974670787" duration="5236000" />
+      <workItem from="1623042112218" duration="1070000" />
+      <workItem from="1623043237338" duration="278000" />
+      <workItem from="1623043570932" duration="121000" />
+      <workItem from="1623043715326" duration="978000" />
+      <workItem from="1623057194180" duration="3647000" />
+      <workItem from="1623063244025" duration="344000" />
+      <workItem from="1623063601614" duration="1252000" />
+      <workItem from="1623160940145" duration="1216000" />
+      <workItem from="1623168513475" duration="1898000" />
+      <workItem from="1623308872109" duration="8179000" />
+      <workItem from="1623389344781" duration="12336000" />
+      <workItem from="1623482748487" duration="21610000" />
+      <workItem from="1623564763883" duration="14575000" />
+      <workItem from="1623654936599" duration="11162000" />
     </task>
     <task id="LOCAL-00001" summary="add usercase">
       <created>1621498947980</created>
@@ -254,7 +303,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622103166566</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="add media">
+      <created>1622789033671</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1622789033671</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -299,7 +355,23 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.log" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="add usercase" />
     <MESSAGE value="add media" />
     <option name="LAST_COMMIT_MESSAGE" value="add media" />

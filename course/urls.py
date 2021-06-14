@@ -12,8 +12,10 @@ from django.urls import path,re_path
 from .views import *
 
 urlpatterns = [
- path('courses/',CourseView.as_view()),
- re_path('courses/(?P<pk>\\d+)',CourseObjectView.as_view({"get": "retrieve", "delete": "destroy", "put": "update"}))
+ path('course/',CourseView.as_view()),
+ path('course/recommend',CourseRecommend.as_view()),
+ path('course/upload',CourseUpload.as_view()),
+ re_path('course/(?P<pk>\\d+)',CourseObjectView.as_view({"get": "retrieve", "delete": "destroy", "put": "update"}))
 ]
 
 

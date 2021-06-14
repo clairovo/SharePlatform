@@ -1,15 +1,18 @@
 from rest_framework.views import APIView
+import logging
 from rest_framework.response import Response
 from user.models import *
 from user.serializers import StudentSerializers, TeacherSerializers
 from .login_token import *
 from django.contrib.auth.hashers import check_password
+
 from django.views.decorators.csrf import csrf_exempt
 # Create your views here.
 
 
 class LoginView(APIView):
     permission_classes = [] # 取消全局token认证
+    logger = logging.getLogger('login.views')
 
     def post(self,request):
         """
@@ -29,6 +32,8 @@ class LoginView(APIView):
                     data['code'] = 200
                     data['msg'] = 'login successful'
                     data['token'] = create_token(student, role)
+                    self.logger.info("学生"+student.username+"登录成功！")
+                    self.logger.info("login success")
                     return Response(data,status=200)
                 else:
                     data['msg'] = 'password  is wrong'
@@ -45,6 +50,7 @@ class LoginView(APIView):
                     data['code'] = 200
                     data['msg'] = 'login success'
                     data['token'] = create_token(teacher, role)
+                    self.logger.info("教师" + teacher.username + "登录成功！")
                     return Response(data, status=200)
                 else:
                     data['msg'] = 'password  is wrong'
@@ -56,6 +62,7 @@ class LoginView(APIView):
 
 class RegisterView(APIView):
     permission_classes = []  # 取消全局token认证
+    logger = logging.getLogger('login.views')
 
     def post(self,request):
         data ={'code':400}
@@ -65,19 +72,20 @@ class RegisterView(APIView):
         else:
             serializers = TeacherSerializers(data=request.data)
         try:
-            if serializers.is_valid():
+            if serializers.is_valid(raise_exception=True):
                 user = serializers.save()
                 data['code'] = 201
-                data['msg'] = ''
+                data['msg'] = "注册成功！"
                 # role = serializers.validated_data.get('role')
                 # data['token'] = create_token(user, role)
+                self.logger.info(request.data.get('role')+request.data.get('username') + "注册成功！")
                 return Response(data, status=201)
             else:
                 data['msg'] = '用户名已存在！'
                 return Response(data, status=401)
         except Exception as e:
             print(e)
-            data['msg'] = '密码不能为空'
+            data['msg'] = '用户名已存在！'
         return Response(data,status=401)
 
 

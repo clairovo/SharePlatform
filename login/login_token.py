@@ -24,13 +24,34 @@ class Authenticated:  # 无需继承其他认证类
         :param view: 视图函数
         :return: 是否登录（true or false)
         """
-        token = request.META.get('HTTP_TOKEN')
+        token = request.META.get('HTTP_AUTHORIZATION')
         if token:
             BOOLEAN=verify_token(token=token)  # 验证成功返回True 失效及错误token 返回False
             return BOOLEAN
         else:
             BOOLEAN=False
             return BOOLEAN
+
+
+class AdminPermission:   # 教师，管理员权限验证类
+    message = "必须是Admin才能访问"
+
+    @staticmethod
+    def has_permission(request,view):
+        """
+        :param request: 请求
+        :param view: 视图函数
+        :return:  是否具有admin权限(true/false)
+        """
+        if Authenticated.has_permission(request,view):
+            print(request.META)
+            token = request.META.get('HTTP_AUTHORIZATION')
+            decode = jwt.decode(token, settings.SECRET_KEY, algorithms=['HS256'])
+            if decode.get('role') == 'teacher':
+                return True
+            else:
+                return False
+        return False
 
 
 def verify_token(token):
@@ -40,9 +61,8 @@ def verify_token(token):
     """
     try:
         decode = jwt.decode(token, settings.SECRET_KEY , algorithms=['HS256'])
-        logger.debug(decode.get('username'))
-        logger.debug(decode.get('uid'))
-        #print(decode.get('username'))
+        logger.info(decode.get('username'))
+        logger.info(decode.get('uid'))
         return True
     except Exception as e:
         # '签名已过期
@@ -58,7 +78,7 @@ def resolve_token(func):
     :return: dict{} 用户信息
     """
     def resolve_token1(self,request):
-        token = request.META.get('HTTP_TOKEN')
+        token = request.META.get('HTTP_AUTHORIZATION')
         args ={}
         try:
             decode = jwt.decode(token, settings.SECRET_KEY, algorithms=['HS256'])

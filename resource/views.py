@@ -24,7 +24,7 @@ def hello(request):
 class FileUploadView(APIView):
     permission_classes = []
     path = os.path.join(MEDIA_ROOT,'files')
-    logger = logging.getLogger('app.views')
+    logger = logging.getLogger('resource.views')
 
     def get(self,request):
         return render(self.request,'index.html')
@@ -48,7 +48,7 @@ class FileUploadView(APIView):
         course = Course.objects.filter(cno=course_id).first()
         self.path = os.path.join(self.path,course.name)  # 以课程名为文件夹名
         if not os.path.exists(self.path):
-            self.logger.debug('folder is not exist')
+            self.logger.info('folder is not exist')
             os.makedirs(self.path)  # 创建存储文件的文件夹
         # 文件写入磁盘
         for file in files:
@@ -70,7 +70,7 @@ class FileUploadView(APIView):
 class FileDownloadView(APIView):
     permission_classes = []
     path = os.path.join(MEDIA_ROOT, 'files')
-    logger = logging.getLogger('apps.views')
+    logger = logging.getLogger('resource.views')
 
     def get(self,request, resource_id):
         """
